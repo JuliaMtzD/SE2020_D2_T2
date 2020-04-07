@@ -1,0 +1,159 @@
+<!-- Estilo general -->
+
+<!DOCTYPE html>
+<html lang="en">
+<title>WorkerModifyProduct</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-white w3-content" style="max-width:1600px">
+
+
+<!-- Links (sit on top) -->
+<div class="w3-display-top w3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+    <div class="w3-col s2">
+	  <a href="WorkerStock.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+    <div class="w3-col s2">
+      <a href="WorkerMainPage.html" class="w3-button w3-block"><img src="images\home.png" class="w3-left" style="width:30px">Home</a>
+    </div>
+    <div class="w3-col s6">
+      .
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block"><img src="images\worker.png" style="width:35px"> Logout</a>
+    </div>
+	</div>
+ </div>
+ 
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+  <a href="WorkerMyAccount.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ACCOUNT </a>  
+  <a href="WorkerSuppliers.html" onclick="w3_close()" class="w3-bar-item w3-button">SUPPLIER LIST </a>  
+  <a href="WorkerOngoingOrders.html" onclick="w3_close()" class="w3-bar-item w3-button"> SEE ONGOING ORDERS</a> 
+  <a href="WorkerOrderHistory.html" onclick="w3_close()" class="w3-bar-item w3-button">FINNISHED ORDERS HISTORY</a> 
+  <a href="WorkerStock.html" onclick="w3_close()" class="w3-bar-item w3-button">STOCK</a>
+  <a href="WorkerSupplierOrder.html" onclick="w3_close()" class="w3-bar-item w3-button"> SUPPLIER ORDER</a> 
+  <a href="WorkerProblemReport.html" onclick="w3_close()" class="w3-bar-item w3-button">PROBLEM REPORT</a>
+  <a href="WorkerClientReports.html" onclick="w3_close()" class="w3-bar-item w3-button">CLIENT REPORTS</a>
+  
+<!--    <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150">  -->
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">PERSONAL PROTECTIVE EQUIPMENT</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+	
+<!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+<!-- Introduction section -->
+  <div class="w3-container w3-white w3-padding-32 w3-padding-large" id="info">
+    <div class="w3-content" style="max-width:600px">
+     <h1 align=center ><b>MODIFY PRODUCT</b></h1>
+
+  </div>
+  </div>
+  
+  <!-- Formulario -->
+ <div class="w3-main" style="margin-left:200px">
+  
+  <form action="WorkerStock.html" method="get">
+  <p>Code: <input type="text" name="WorkerCode" size="10"></p>
+  
+  <p>Product Name: <input type="text" name="ProductName" size="40"></p>
+  
+  <p>Price Per Unit: <input type="text" name="PricePerUnit" size="20"> <label for="currency">Currency:</label>
+<select id="currency">
+  <option value="Euro">€</option>
+  <option value="Dolar">$</option>
+ </select></p>
+  
+  <label for="categories">Category:</label>
+<select id="categories">
+  <option value="category1">Category 1</option>
+  <option value="category2">Category 2</option>
+  <option value="category3">Category 3</option>
+ </select>
+  <p>Supplier: <input type="text" name="nombre" size="40"></p>
+  
+  <div class="w3-main" style="margin-left:600px">
+  <p>
+    <input type="submit" value="Save changes" width="100px" class="w3-button w3-block w3-yellow w3-margin-bottom">
+    </div>
+	
+  </p>
+</form>
+
+</div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+

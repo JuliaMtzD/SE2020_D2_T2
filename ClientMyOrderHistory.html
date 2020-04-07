@@ -1,0 +1,199 @@
+
+<html>
+<title>ClientOrderHistory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+form input, form textarea{
+display: block;    
+} 
+</style>
+
+<head>
+
+<!-- Links (sit on top) -->
+<div class="w3-display-top w3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+    <div class="w3-col s2">
+	  <a href="ClientMainPage.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+    <div class="w3-col s2">
+      <a href="ClientMainPage.html" class="w3-button w3-block"><img src="images\home.png" class="w3-left" style="width:30px">Home</a>
+    </div>
+    <div class="w3-col s6">
+      .
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block"><img src="images\login.png" style="width:35px"> Logout</a>
+    </div>
+	</div>
+ </div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+  <a href="ClientMyAccount.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ACCOUNT </a> 
+  <a href="ClientNotification.html" onclick="w3_close()" class="w3-bar-item w3-button">NOTIFICATIONS </a>  
+  <a href="ClientMyOrderHistory.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ORDER HISTORY</a> 
+  <a href="ClientOngoingOrders.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ONGOING ORDERS</a> 
+  <a href="ClientNewOrder.html" onclick="w3_close()" class="w3-bar-item w3-button">NEW ORDER</a>
+  
+<!--    <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150">  -->
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:325px;margin-right:25px">
+<body>
+<h1 class="w3-center"><b>MY ORDER HISTORY</b></h1>
+<table>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+  <tr>
+    <th>Order Number</th>
+    <th>Sent to</th>
+    <th>Total €</th>
+	<th>Date</th>
+  </tr>
+  
+  <tr>
+    <td>4568978</td>
+    <td>Gaspar de Jovellanos</td>
+    <td>15</td>
+	<td>22 de Marzo de 2020</td>
+  </tr>
+  
+</table>
+
+  <div class="w3-row">
+    <div class="w3-third">
+      <img align=left src="images\chaleco.jpg" style="width:50%" onclick="onClick(this)" alt="Chaleco reflectante">
+	  <p align="left">Chaleco reflectante: dos bandas reflectantes de 360 ​​grados en un ancho de 5 cm te hacen muy visible, incluso en la noche se te verá desde 80 m - 100 m de distancia.</p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="3" readonly></p>
+    </div>
+	</div>
+	
+	<div class="w3-row">
+    <div class="w3-third">
+	  <img align=left src="images\guantes.jpg" style="width:50%" onclick="onClick(this)" alt="Guantes aislados">
+	  <p align="left">Guantes aislados: Materiales duraderos y de calidad.Los guantes aislados están hechos de caucho natural y se moldean por presión, moldeado, vulcanizado o moldeado por inmersión con caucho aislante.</p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="2" readonly></p>
+    </div>
+	</div>
+	  
+	   
+<p align="center">
+<a href="ClientNewOrder.html"><button type="button" align="left">
+
+  <img  src="images\return.png" alt="Buy back" width="22" height="22" style="text-align:right">
+  Buy back
+</button></a>
+</p>	
+
+
+<br>
+<table>
+  <tr>
+    <th>Order Number</th>
+    <th>Sent to</th>
+    <th>Total €</th>
+	<th>Date</th>
+  </tr>
+  
+  <tr>
+    <td>4568978</td>
+    <td>Nicolas Serrano</td>
+    <td>23</td>
+	<td>15 de Enero de 2020</td>
+  </tr>
+ 
+ 
+
+</table>
+</br>
+
+  <div class="w3-row">
+    <div class="w3-third">
+      <img align=left src="images\cascos.png" style="width:50%" onclick="onClick(this)" alt="Cascos reflectantes de ruido">
+	  <p align="left">Casco de obra: Casco ergonómico con alcochado suave reduce la presión en tu cabeza para un uso cómodo. Espacio generoso dentro de las copas de asegura la transpirabilidad mientras la piel sintética suave proporciona un sellado hermético contra ruído</p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="3" readonly></p>
+  </div>
+  </div>
+  
+<p align="center">
+<a href="ClientNewOrder.html"><button type="button" align="left">
+
+  <img href="ClientNewOrder.html" src="images\return.png" alt="Buy back" width="22" height="22" style="text-align:right">
+  Buy back
+</button></a>
+</p>	
+
+</body>
+
+
+  </div>
+
+
+<br>
+<!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left:300px">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+</br>
+</html>
+

@@ -1,0 +1,210 @@
+<!-- Estilo general -->
+
+<!DOCTYPE html>
+<html lang="en">
+<title>ClientOrder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+ <!-- Links (sit on top) -->
+<div class="w3-display-top w3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+    <div class="w3-col s2">
+	  <a href="ClientNewOrder.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+    <div class="w3-col s2">
+      <a href="ClientMainPage.html" class="w3-button w3-block"><img src="images\home.png" class="w3-left" style="width:30px">Home</a>
+    </div>
+    <div class="w3-col s6">
+      .
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block"><img src="images\login.png" style="width:35px"> Logout</a>
+    </div>
+	</div>
+ </div>
+ 
+ 
+ 
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+  <a href="ClientMyAccount.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ACCOUNT </a> 
+  <a href="ClientNotification.html" onclick="w3_close()" class="w3-bar-item w3-button">NOTIFICATIONS </a>  
+  <a href="ClientMyOrderHistory.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ORDER HISTORY</a> 
+  <a href="ClientOngoingOrders.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ONGOING ORDERS</a> 
+  <a href="ClientNewOrder.html" onclick="w3_close()" class="w3-bar-item w3-button">NEW ORDER</a>
+  
+<!--    <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150">  -->
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">PERSONAL PROTECTIVE EQUIPMENT</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-light-grey" style="margin-left:300px">
+	
+<!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Introduction section -->
+  <div class="w3-container w3-white w3-padding-32 w3-padding-large" id="info">
+    <div class="w3-content" style="max-width:600px">
+      <h1 class="w3-center"><b>ORDER</b></h1>
+	  <p align=center>Order Code:<input type="text" value="8896" name="OrderCode" size="20"></p>
+  
+  </div>
+ 
+  
+ 
+  
+  
+  <!-- TABLA :  -->
+  
+  <div align="right">
+<table align=right>
+<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+
+  <tr class="w3-yellow w3-large w3-padding-32">
+  <th>Product Code</th>
+  <th>Product Name</th>
+  <th>Quantity</th>
+  <th>Price Per Unit</th>
+  <th>Price</th>
+  </tr>
+  
+   <tr>
+  <td>G002</td>
+  <td>Guantes proteccion riegos intermedios</td>
+  <td>20</td>
+  <td>5</td>
+  <td>100</td>
+  </tr>
+  
+  <tr>
+  <td>C008</td>
+  <td>Casco amarillo con visera</td>
+  <td>12</td>
+  <td>10</td>
+  <td>120</td>
+  </tr>
+  
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Total</td>
+  <td>220€</td>
+  </tr>
+  
+  </table>
+  </div>
+</br>
+
+<p><font size="4">Client code:</p>
+  <p><input type="text" name="ClientCode" value="C0074" size="20"></p>
+  <p><font size="4">Name: </p>
+  <p><input type="text" name="ClientName" value="ABB" size="20"></p>
+  <p><font size="4">E-mail:</p>
+  <p><input type="text" name="ClientEmail" value=rrhh@abb.com size="20"></p>
+  <p><font size="4">Adress:</p>
+  <p><input type="text" name="ClientAdress" value="Calle A, poligono Oiartzun, Gipuzkoa" size="20"></p>
+  <p><font size="4">Credit card:</p>
+  <p><input type="text" name="ClientCreditCard" value="6699855211" size="20"></p>
+  
+  
+  <!-- BOTON:  -->
+  
+  <div   style="margin-left:600px">
+    <p><a href="ClientMainPage.html"><input type="submit" value="Confirm Order" class="w3-button w3-block w3-yellow w3-margin-bottom" width="100px"></a></p>
+    </div>
+  
+  
+  
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+ </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>

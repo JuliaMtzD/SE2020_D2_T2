@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Introducir en el css
+.w3-margin-left-iker{margin-left:299px!important}.w3-margin-right-iker{margin-right:300px!important}
+-->
+
+
+<html lang="en">
+<title>Order History</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<!-- <body class="w3-light-grey w3-content" style="max-width:1600px">
+ -->
+<!-- Links (sit on top) -->
+<div class="w3-display-top w3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+    <div class="w3-col s2">
+	  <a href="WorkerMainPage.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+    <div class="w3-col s2">
+      <a href="WorkerMainPage.html" class="w3-button w3-block"><img src="images\home.png" class="w3-left" style="width:30px">Home</a>
+    </div>
+    <div class="w3-col s6">
+      .
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block"><img src="images\worker.png" style="width:35px"> Logout</a>
+    </div>
+	</div>
+ </div>
+ 
+<body class="w3-white w3-content" style="max-width:1600px">
+ 
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+  <a href="WorkerMyAccount.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ACCOUNT </a>  
+  <a href="WorkerSuppliers.html" onclick="w3_close()" class="w3-bar-item w3-button">SUPPLIER LIST </a>  
+  <a href="WorkerOngoingOrders.html" onclick="w3_close()" class="w3-bar-item w3-button"> SEE ONGOING ORDERS</a> 
+  <a href="WorkerOrderHistory.html" onclick="w3_close()" class="w3-bar-item w3-button">FINNISHED ORDERS HISTORY</a> 
+  <a href="WorkerStock.html" onclick="w3_close()" class="w3-bar-item w3-button">STOCK</a>
+  <a href="WorkerSupplierOrder.html" onclick="w3_close()" class="w3-bar-item w3-button"> SUPPLIER ORDER</a> 
+  <a href="WorkerProblemReport.html" onclick="w3_close()" class="w3-bar-item w3-button">PROBLEM REPORT</a>
+  <a href="WorkerClientReports.html" onclick="w3_close()" class="w3-bar-item w3-button">CLIENT REPORTS</a>
+  
+<!--    <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150">  -->
+</nav>
+
+<!--   Tabla -->
+
+	<div class="w3-container w3-white  w3-padding-32 w3-margin-left-iker  " id="table">
+		<div class="w3-content " style="max-width:600px"> 
+			<h1 class="w3-center"><b>ORDER HISTORY</b></h1>
+			<h6 class="w3-center"></h6>
+			  
+		 
+		    <table class="w3-table w3-bordered " style="margin:0 -8px">
+				<div class="w3-half w3-margin-bottom">
+					<ul class="w3-ul w3-white w3-center ">
+						<tr class="w3-yellow w3-large w3-padding-32">
+							<th>ID</th>
+							<th>Client</th>
+							<th>Worker ID</th>
+							<th>Delivery Date</th>
+						</tr>
+						<tr class="w3-padding-16">
+							<td>O1032</td>
+							<td>Sarralle</td>
+							<td>W3</td>
+							<td>15/03/2020</td>
+							<td><a href="WorkerOrderDetail.html"><button class="w3-button w3-light-grey w3-padding">See more</button></a></td>
+						</tr>
+						<tr class="w3-padding-16">
+							<td>O0942</td>
+							<td>CAF</td>
+							<td>W11</td>
+							<td>29/02/2020</td>
+							<td><a href="WorkerOrderDetail.html"><button class="w3-button w3-light-grey w3-padding">See more</button></a></td>
+						</tr>
+						<tr class="w3-padding-16">
+							<td>O1432</td>
+							<td>ULMA</td>
+							<td>W7</td>
+							<td>01/02/2020</td>
+							<td><a href="WorkerOrderDetail.html"><button class="w3-button w3-light-grey w3-padding">See more</button></a></td>
+						</tr>
+						<tr class="w3-padding-16">
+							<td>O2382</td>
+							<td>Arcelor Mittal</td>
+							<td>W1</td>
+							<td>07/07/2019</td>
+							<td><a href="WorkerOrderDetail.html"><button class="w3-button w3-light-grey w3-padding">See more</button></a></td>
+						</tr>
+						<tr class="w3-padding-16">
+							<td>O0582</td>
+							<td>Irizar</td>
+							<td>W3</td>
+							<td>12/03/2019</td>
+							<td><a href="WorkerOrderDetail.html"><button class="w3-button w3-light-grey w3-padding">See more</button></a></td>
+						</tr>
+					</ul>
+			</table>
+				</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+</body>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey w3-margin-left-iker">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-margin-left-iker w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+</div>

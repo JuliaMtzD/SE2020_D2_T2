@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Client LogIn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+
+
+<!-- Links (sit on top) -->
+<div class="w3-display-topffw3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+        <div class="w3-col s3">
+      <a href="index.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+	</div>
+ </div>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+ 
+   <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150"> 
+</nav>
+
+<!-- Start content page -->
+<div class="w3-main" style="margin-left:300px">
+
+
+<div class="w3-container w3-light-grey w3-center w3-padding-32 w3-padding-large w3-text-align:left" id="ClientLogIn">
+    <div class="w3-content" style="max-width:300px ">
+    <h1><b>Client Log In</b></h1>
+       <form action="ClientMainPage.html" target="_blank">
+        <div class="w3-section" >
+          <label for="ClientID"> Username 
+          <input type="text" name="ClientID" id="ClientID" required placeholder="Your username..."></label>
+        </div>
+        
+        <div class="w3-section">
+        <label for="ClientPassword"> Password
+        <input type="password" id="ClientPassword" name="ClientPassword" required placeholder="Your password..."> </label>
+        </div>
+      
+
+        <input type="submit" value="Log In" class="w3-button w3-block w3-yellow w3-margin-bottom" >
+        
+      </form>
+      <a href="ClientSignUp.html">  Don't have an account yet? Sign up here </a>
+      
+
+ 
+ 
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>

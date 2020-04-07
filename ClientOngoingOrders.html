@@ -1,0 +1,220 @@
+
+<html>
+<title>ClientOngoingOrders</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+
+<head>
+
+<!-- Links (sit on top) -->
+<div class="w3-display-top w3-text-grey w3-black" style="z-index:3;margin-left:300px">
+  <div class="w3-row w3-large w3-grey" >
+    <div class="w3-col s2">
+	  <a href="ClientMainPage.html" class="w3-button w3-block"><img src="images\flecha.png" class="w3-left" style="width:30px">Back</a>
+    </div> 
+    <div class="w3-col s2">
+      <a href="ClientMainPage.html" class="w3-button w3-block"><img src="images\home.png" class="w3-left" style="width:30px">Home</a>
+    </div>
+    <div class="w3-col s6">
+      .
+    </div>
+    <div class="w3-col s2">
+      <a href="index.html" class="w3-button w3-block"><img src="images\login.png" style="width:35px"> Logout</a>
+    </div>
+	</div>
+ </div>
+
+
+</head>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <img src="images\ProSeg.png" class="w3-image w3-padding-8" style="width:300px">
+  <a href="ClientMyAccount.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ACCOUNT </a> 
+  <a href="ClientNotification.html" onclick="w3_close()" class="w3-bar-item w3-button">NOTIFICATIONS </a>  
+  <a href="ClientMyOrderHistory.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ORDER HISTORY</a> 
+  <a href="ClientOngoingOrders.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ONGOING ORDERS</a> 
+  <a href="ClientNewOrder.html" onclick="w3_close()" class="w3-bar-item w3-button">NEW ORDER</a>
+  
+<!--    <img src="images\iconoEPI.jpg" alt="Industria" class="w3-image w3-padding-32" width="100" height="150">  -->
+</nav>
+
+<!--Page Content -->
+<div class="w3-main" style="margin-left:325px;margin-right:25px">
+<body>
+<h1 class="w3-center"><b>ONGOING ORDERS</b></h1>
+<table>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+  <tr>
+    <th>Order Number</th>
+    <th>Sent to</th>
+    <th>Total €</th>
+	<th>Date</th>
+  </tr>
+  
+  <tr>
+    <td>5615645</td>
+    <td>Nicolas Serrano</td>
+    <td>45</td>
+	<td>22 de Marzo de 2020</td>
+  </tr>
+  
+</table>
+
+
+  <div class="w3-row">
+    <div class="w3-third">
+      <img align=left src="images\casco_obra.png" style="width:50%" onclick="onClick(this)" alt="Cascos reflectantes de ruido">
+	  <p align="left">Casco de obra: Este casco de construcción dispone de un interior de 6 piezas para un ajuste flexible y una gran comodidad. Con aberturas de ventilación para una ventilación óptima y una comodidad climática perfecta durante largos periodos de uso.</p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="3" readonly></p>
+  </div>
+  </div>
+	   
+<p align="center">
+<a href="ClientModifyOrder.html"><button type="button" align="left">
+ Modify
+</button></a>
+
+<button type="button" align="left">
+ Cancel
+</button>
+
+</p>	
+
+
+
+
+<br>
+<table>
+  <tr>
+    <th>Order Number</th>
+    <th>Sent to</th>
+    <th>Total €</th>
+	<th>Date</th>
+  </tr>
+  
+  <tr>
+    <td>7891523</td>
+    <td>Nicolas Serrano</td>
+    <td>45</td>
+	<td>27 de Enero de 2020</td>
+  </tr>
+ 
+ 
+
+</table>
+</br>
+  
+    <div class="w3-row">
+    <div class="w3-third">
+      <img align=left src="images\gafas.jpg" style="width:50%" onclick="onClick(this)" alt="Gafas">
+	  <p align="left">Gafas protectoras: evita golpes, salpicaduras del 99% de los rayos ultravioleta y protege los ojos de los objetos voladores. Lente: policarbonato, marco: PVC blando. </p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="1" readonly></p>
+    </div>
+	</div>
+	
+	<div class="w3-row">
+    <div class="w3-third">
+	  <img align=left src="images\zapatos.png" style="width:50%" onclick="onClick(this)" alt="zapatos">
+	  <p align="left">Calzado de seguridad: Zapatos de seguridad para hombre y mujer con puntera de acero. Zapatillas de seguridad de trabajo, calzado de industrial y deportivo</p>
+	  <p align="left">Quantity: <input type="text" name="texto" value="4" readonly></p>
+    </div>
+	</div>
+	  
+	   
+<p align="center">
+<a href="ClientModifyOrder.html"><button style="w3-button" type="button" align="center">
+ Modify
+</button></a>
+<button type="button" align="left">
+  Cancel
+</button>
+</p>	
+  
+
+</body>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left:300px">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>ProSeg is compromised with your future, please do not heasite to send us your CV if you are interested in working with us<br><br>cv@proseg.com</p>  
+		<img src="images\iso.png" class="w3-left w3-margin-right" style="width:50px">
+		<img src="images\secure.png" class="w3-left w3-margin-right" style="width:50px">
+      </div>
+    
+      <div class="w3-third">
+        <h3>FIND US</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="images\mundo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Industrial Estate Landaben-Street F</span><br>
+            <span>20009 </span><br>
+			<span>Donostia - San Sebastián</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="images\phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">+34 905 633 554</span><br>
+            <span>Attention hours: 9:00 - 20:00</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>SOCIAL NETWORKS<h3>
+		<img src="images\facebook.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\instagram.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\twitter.png" class="w3-left w3-margin-right" style="width:30px">
+		<img src="images\linkedin.png" class="w3-left w3-margin-right" style="width:30px">  
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+</br>
+</html>
+
