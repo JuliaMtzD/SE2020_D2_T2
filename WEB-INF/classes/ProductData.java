@@ -64,7 +64,6 @@ public class ProductData {
             ResultSet result = statement.executeQuery(sql);
 
             while(result.next()) {
-
                 ProductData product = new ProductData(
 
                     Integer.parseInt(result.getString("ProductId")),
