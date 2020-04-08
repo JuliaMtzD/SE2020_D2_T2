@@ -2,12 +2,23 @@
 <web-app>
 
 <servlet>
-  <servlet-name>primer</servlet-name>
-  <servlet-class>HelloWorld</servlet-class>
+  <servlet-name>ProductCatalog</servlet-name>
+  <servlet-class>ProductCatalog</servlet-class>
 </servlet>
 
+<servlet>
+  <servlet-name>ProductData</servlet-name>
+  <servlet-class>ProductData</servlet-class>
+</servlet>
+
+
 <servlet-mapping>
-  <servlet-name>primer</servlet-name>
-  <url-pattern>/start</url-pattern>
+  <servlet-name>ProductCatalog</servlet-name>
+  <url-pattern>/ProductCatalog</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>ProductData</servlet-name>
+  <url-pattern>/ProductData</url-pattern>
 </servlet-mapping>
 </web-app>
