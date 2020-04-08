@@ -27,7 +27,6 @@ public class ProductCatalog extends HttpServlet {
                 ProductData product = productList.elementAt(i);
 				toClient.println("<div class='w3-row'>");
 				toClient.println("<div class='w3-third w3-padding-16'>");
-/* 				toClient.println("<img align=left src='images\casco_obra.png' style='width:50%' onclick='onClick(this)' alt='Cascos reflectantes de ruido'>"); */
 				toClient.println("<p align='center'><b>" + product.productName + "</b></p>");
 				toClient.println("</div>");
 				toClient.println("<div class='w3-third w3-padding-16'>");
