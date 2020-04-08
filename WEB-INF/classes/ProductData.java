@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class ProductData {
 
-    String	productId;
+    int	productId;
 
     String	productName;
 
@@ -35,7 +35,7 @@ public class ProductData {
 	
 	
 
-    ProductData (String productId, String productName, int SellingPrice, int Category) {
+    ProductData (int productId, String productName, int SellingPrice, int Category) {
 
         this.productId    = productId;
 
@@ -43,7 +43,7 @@ public class ProductData {
 
         this.SellingPrice   = SellingPrice;
 
-        this.Category = Category;
+        this.categoryId = Category;
 
     }
 
@@ -73,7 +73,7 @@ public class ProductData {
 
                     Integer.parseInt(result.getString("SellingPrice")),
 					
-					Integer.parseInt(result.getString("Category")),
+					Integer.parseInt(result.getString("Category"))
 
                 );
 
