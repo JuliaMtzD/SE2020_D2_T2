@@ -11,6 +11,10 @@
   <servlet-class>ProductData</servlet-class>
 </servlet>
 
+<servlet>
+  <servlet-name>WorkerSuppliers</servlet-name>
+  <servlet-class>WorkerSuppliers</servlet-class>
+</servlet>
 
 <servlet-mapping>
   <servlet-name>ProductCatalog</servlet-name>
@@ -21,4 +25,9 @@
   <servlet-name>ProductData</servlet-name>
   <url-pattern>/ProductData</url-pattern>
 </servlet-mapping>
+  
+<servlet-mapping>
+  <servlet-name>WorkerSuppliers</servlet-name>
+  <url-pattern>/WorkerSuppliers</url-pattern>
+</servlet-mapping>  
 </web-app>
