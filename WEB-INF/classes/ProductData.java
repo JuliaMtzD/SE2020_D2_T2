@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class ProductData {
 
-    int	productId;
+    String	productId;
 
     String	productName;
 
@@ -24,26 +24,28 @@ public class ProductData {
 
     int productsInStock;
 
-	int categoryId;
+	String categoryId;
 
 	int supplierId;
 
-	int SellingPrice;
+	float SellingPrice;
 
-	int BuyingPrice;
+	float BuyingPrice;
 
 	
 	
 
-    ProductData (int productId, String productName, int SellingPrice, int Category) {
+    ProductData (String productId, String productName, String categoryId, float SellingPrice) {
 
         this.productId    = productId;
 
         this.productName  = productName;
+		
+		this.categoryId = categoryId;
+		
+		this.SellingPrice = SellingPrice;
 
-        this.SellingPrice   = SellingPrice;
 
-        this.categoryId = Category;
 
     }
 
@@ -52,7 +54,7 @@ public class ProductData {
 
         Vector<ProductData> vec = new Vector<ProductData>();
 
-        String sql = "SELECT Products.ProductID, Products.ProductName, Products.SellingPrice, Products.Category FROM Products";
+        String sql = "SELECT Products.ProductID, Products.ProductName, Products.Category, Products.SellingPrice FROM Products";
 
 
         System.out.println("getProductList: " + sql);
@@ -67,13 +69,14 @@ public class ProductData {
 	
                 ProductData product = new ProductData(
 
-                    result.getInt("ProductId"),
+                    result.getString("ProductId"),
 
                     result.getString("ProductName"),
-
-                    Integer.parseInt(result.getString("SellingPrice")),
 					
-					Integer.parseInt(result.getString("Category"))
+					result.getString("Category"),
+					
+					Float.parseFloat(result.getString("SellingPrice"))
+					
 
                 );
 				
