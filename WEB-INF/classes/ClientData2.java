@@ -122,7 +122,7 @@ public class ClientData2 {
 
         Vector<ClientData2> vec = new Vector<ClientData2>();
 
-        String sql = "SELECT Clients.ClientID, Clients.Adress, Clients.CreditCard, Clients.Email, Clients.Password, Clients.TelephoneNumber FROM Clients WHERE Clients.ClientName="+name;
+        String sql = "SELECT Clients.ClientID, Clients.Adress, Clients.CreditCard, Clients.Email, Clients.Password, Clients.TelephoneNumber FROM Clients WHERE Clients.ClientName='"+name+"'";
 
 
         System.out.println("getClientList: " + sql);
