@@ -41,7 +41,7 @@ public class Utils {
 		str.append("<div class='w3-main' style='margin-left:300px'>");
 		str.append("<div class='w3-container w3-white w3-padding-32 w3-padding-large'>");
 		str.append("<div class='w3-content' style='max-width:800px'>");
-        str.append("<h1 align=center style='font-size:50px;'>" + title + "</h1>");
+        str.append("<h1 align=center ><b>" + title + "</b></h1>");
         return str.toString();
     }
 
