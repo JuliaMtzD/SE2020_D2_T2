@@ -17,6 +17,21 @@
 </servlet>
 
 <servlet>
+  <servlet-name>WorkerData</servlet-name>
+  <servlet-class>WorkerData</servlet-class>
+</servlet>
+
+<servlet>
+  <servlet-name>WorkerMyAccount</servlet-name>
+  <servlet-class>WorkerMyAccount</servlet-class>
+</servlet>
+
+<servlet>
+  <servlet-name>WorkerUpdate</servlet-name>
+  <servlet-class>WorkerUpdate</servlet-class>
+</servlet>
+
+<servlet>
   <servlet-name>WorkerClientReports</servlet-name>
   <servlet-class>WorkerClientReports</servlet-class>
 </servlet>
@@ -42,6 +57,23 @@
   <url-pattern>/ClientData</url-pattern>
 </servlet-mapping>  
   
+  <servlet-mapping>
+  <servlet-name>WorkerData</servlet-name>
+  <url-pattern>/WorkerData</url-pattern>
+</servlet-mapping>  
+
+  <servlet-mapping>
+  <servlet-name>WorkerMyAccount</servlet-name>
+  <url-pattern>/WorkerMyAccount</url-pattern>
+</servlet-mapping>  
+
+  <servlet-mapping>
+  <servlet-name>WorkerUpdate</servlet-name>
+  <url-pattern>/WorkerUpdate</url-pattern>
+</servlet-mapping>  
+
+
+
 <servlet-mapping>
   <servlet-name>WorkerClientReports</servlet-name>
   <url-pattern>/WorkerClientReports</url-pattern>
