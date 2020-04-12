@@ -6,15 +6,7 @@
   <servlet-class>ProductCatalog</servlet-class>
 </servlet>
 
-<servlet>
-  <servlet-name>ProductData</servlet-name>
-  <servlet-class>ProductData</servlet-class>
-</servlet>
 
-<servlet>
-  <servlet-name>ClientData</servlet-name>
-  <servlet-class>ClientData</servlet-class>
-</servlet>
 
 <servlet>
   <servlet-name>WorkerData</servlet-name>
@@ -41,21 +33,22 @@
   <servlet-name>WorkerSuppliers</servlet-name>
   <servlet-class>WorkerSuppliers</servlet-class>
 </servlet>
+  
+ <servlet>
+  <servlet-name>WorkerHistorySuppliers</servlet-name>
+  <servlet-class>WorkerHistorySuppliers</servlet-class>
+</servlet>
+
+<servlet>
+  <servlet-name>ClientMyAccount</servlet-name>
+  <servlet-class>ClientMyAccount</servlet-class>
+</servlet>
 
 <servlet-mapping>
   <servlet-name>ProductCatalog</servlet-name>
   <url-pattern>/ProductCatalog</url-pattern>
 </servlet-mapping>
-
-<servlet-mapping>
-  <servlet-name>ProductData</servlet-name>
-  <url-pattern>/ProductData</url-pattern>
-</servlet-mapping>
-
-<servlet-mapping>
-  <servlet-name>ClientData</servlet-name>
-  <url-pattern>/ClientData</url-pattern>
-</servlet-mapping>  
+ 
   
   <servlet-mapping>
   <servlet-name>WorkerData</servlet-name>
@@ -82,7 +75,18 @@
 
   
 <servlet-mapping>
+  <servlet-name>WorkerHistorySuppliers</servlet-name>
+  <url-pattern>/WorkerHistorySuppliers</url-pattern>
+</servlet-mapping>  
+
+  
+<servlet-mapping>
   <servlet-name>WorkerSuppliers</servlet-name>
   <url-pattern>/WorkerSuppliers</url-pattern>
+</servlet-mapping>    
+  
+<servlet-mapping>
+  <servlet-name>ClientMyAccount</servlet-name>
+  <url-pattern>/ClientMyAccount</url-pattern>
 </servlet-mapping>  
 </web-app>

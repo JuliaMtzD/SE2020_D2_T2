@@ -50,11 +50,11 @@ public class ProductData {
     }
 
 	
-    public static Vector<ProductData> getProductList(Connection connection) {
+    public static Vector<ProductData> getProductList(Connection connection, int category) {
 
         Vector<ProductData> vec = new Vector<ProductData>();
 
-        String sql = "SELECT Products.ProductID, Products.ProductName, Products.Category, Products.SellingPrice FROM Products";
+        String sql = "SELECT Products.ProductID, Products.ProductName, Products.Category, Products.SellingPrice FROM Products WHERE Products.Category="+category;
 
 
         System.out.println("getProductList: " + sql);
