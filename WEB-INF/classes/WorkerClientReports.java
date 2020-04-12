@@ -19,6 +19,9 @@ public class WorkerClientReports extends HttpServlet {
 		
 		toClient.println(UtilsWorker.header("CLIENT REPORT", "WorkerMainPage.html"));
 
+	int  n = ClientData.getBestClient(connection);
+	float  m = ClientData.getBestRevenue(connection);
+
 
 
 toClient.println("<div class='w3-main'>");
@@ -27,15 +30,19 @@ toClient.println("<div class='w3-container w3-white w3-center w3-padding-32 w3-p
 toClient.println(" <div class='w3-content' style='max-width:600px '> ");
 toClient.println("<h1><b>BEST CLIENT</b></h1>");
 toClient.println("<div class='w3-container w3-dark-grey w3-center w3-padding-32 w3-padding-large w3-text-align:left' id='personalinformation'> ");
- toClient.println("<h3 class='w3-center'><b> The best client is: </b></h3>");
-       toClient.println("<h4 class='w3-center'> With a total revenue of  </h4>");
+toClient.println("<h3 class='w3-center'><b> The best client is: "+ n +"</b></h3>");
+toClient.println("<h3 class='w3-center'><b> With a total revenue of: "+ m +" $</b></h3>");
+
+ 
+
+ 
        toClient.println("</div>");
        toClient.println("</div>");
        toClient.println("</div>");
   
 
 	toClient.println("<div class='w3-main ' style='margin:50px ' >");
-	toClient.println("<h4>CLIENTS: </h4>");
+	toClient.println("<h4>CLIENTS WHO HAVE MADE A PURCHASE: </h4>");
 		toClient.println(" <table class='w3-table w3-bordered' style='margin: 0-16 px'>");
 			toClient.println("	<div class='w3-half w3-margin-bottom'>");
 			toClient.println("	  <ul class='w3-ul w3-white w3-center '>");
@@ -56,6 +63,8 @@ toClient.println("<div class='w3-container w3-dark-grey w3-center w3-padding-32 
 							toClient.println("<td>" + client.clientId + " </td>");
 							toClient.println("<td>" + client.clientName + " </td>");
 							toClient.println("<td>" + client.clientTelephone + " </td>");
+							toClient.println("<td>" + client.orders + " </td>");
+							toClient.println("<td>" + client.revenue + " </td>");
 							toClient.println("</tr>");
        					 }
 					
