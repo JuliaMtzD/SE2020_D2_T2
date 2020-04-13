@@ -23,7 +23,6 @@ public class WorkerClientReports extends HttpServlet {
 	float  m = ClientData.getBestRevenue(connection);
 
 
-
 toClient.println("<div class='w3-main'>");
 toClient.println("<div class='w3-main' style='margin-left:300px'>");
 toClient.println("<div class='w3-container w3-white w3-center w3-padding-32 w3-padding-large w3-text-align:left'>");
@@ -31,10 +30,9 @@ toClient.println(" <div class='w3-content' style='max-width:600px '> ");
 toClient.println("<h1><b>BEST CLIENT</b></h1>");
 toClient.println("<div class='w3-container w3-dark-grey w3-center w3-padding-32 w3-padding-large w3-text-align:left' id='personalinformation'> ");
 toClient.println("<h3 class='w3-center'><b> The best client is: "+ n +"</b></h3>");
+
 toClient.println("<h3 class='w3-center'><b> With a total revenue of: "+ m +" $</b></h3>");
-
  
-
  
        toClient.println("</div>");
        toClient.println("</div>");
