@@ -35,5 +35,6 @@ public class WorkerUpdate extends HttpServlet {
 		
 		//---------------------------------------------
 //		res.sendRedirect("WorkerEdit?id=" + idStr + "&a=" + Math.random());
+	res.sendRedirect("WorkerMyAccount?id="+idStr+""); 
     }
 }
