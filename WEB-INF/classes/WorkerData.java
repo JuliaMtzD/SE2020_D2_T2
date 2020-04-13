@@ -51,10 +51,11 @@ WorkerData (int workerId, String workerName, String workerLastName, String worke
         return vec;
     }
     
-    public static Vector<WorkerData> getWorkerList2(Connection connection, String Id) {
-        Vector<WorkerData> vec = new Vector<WorkerData>();
+    public static Vector<WorkerData> getWorkerList2(Connection connection, int ID) {
         
-        String sql = "SELECT Workers.WorkerID, Workers.FirstName, Workers.LastName, Workers.Password, Workers.Email, Workers.Department FROM Workers WHERE (([Workers].[WorkerID]="+Id+")";
+        Vector<WorkerData> vec = new Vector<WorkerData>();
+    
+        String sql = "SELECT Workers.WorkerID, Workers.FirstName, Workers.LastName, Workers.Password, Workers.Email, Workers.Department FROM Workers WHERE (([Workers].[WorkerID]= "+ ID +"))";
         System.out.println("getClientList: " + sql);
         try {
             Statement statement=connection.createStatement();
@@ -79,6 +80,7 @@ WorkerData (int workerId, String workerName, String workerLastName, String worke
         }
         return vec;
     }
+    
 	public static int updateWorker(Connection connection, WorkerData worker) {
         String sql ="UPDATE Workers "
             + "SET FirstName = ?, LastName = ?, Password = ?, Email=?, Department=?"
@@ -104,4 +106,25 @@ WorkerData (int workerId, String workerName, String workerLastName, String worke
         }
         return n;
     }
+    
+    public static int deleteWorker(Connection connection, WorkerData worker) {
+        String sql ="DELETE * FROM Workers WHERE WorkerID=? ";
+
+
+        System.out.println("deleteWorker: " + sql);
+        int n = 0;
+        try {
+            PreparedStatement stmtUpdate= connection.prepareStatement(sql);
+            stmtUpdate.setInt(1,worker.workerId);	
+			n = stmtUpdate.executeUpdate();
+            stmtUpdate.close();
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in deleteWorker: " + sql + " Exception: " + e);
+        }
+        return n;
+    }
+    
+    
 }
