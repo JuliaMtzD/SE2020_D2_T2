@@ -6,12 +6,17 @@
   <servlet-class>ProductCatalog</servlet-class>
 </servlet>
 
-
-
 <servlet>
   <servlet-name>WorkerData</servlet-name>
   <servlet-class>WorkerData</servlet-class>
 </servlet>
+
+<servlet>
+  <servlet-name>HistoryData</servlet-name>
+  <servlet-class>HistoryData</servlet-class>
+</servlet>
+  
+  
 
 <servlet>
   <servlet-name>WorkerMyAccount</servlet-name>
@@ -28,6 +33,10 @@
   <servlet-class>WorkerClientReports</servlet-class>
 </servlet>
 
+<servlet>
+  <servlet-name>WorkerSemesterHistory</servlet-name>
+  <servlet-class>WorkerSemesterHistory</servlet-class>
+</servlet>
 
 <servlet>
   <servlet-name>WorkerSuppliers</servlet-name>
@@ -49,7 +58,7 @@
   <url-pattern>/ProductCatalog</url-pattern>
 </servlet-mapping>
  
-  
+
   <servlet-mapping>
   <servlet-name>WorkerData</servlet-name>
   <url-pattern>/WorkerData</url-pattern>
@@ -78,6 +87,18 @@
   <servlet-name>WorkerHistorySuppliers</servlet-name>
   <url-pattern>/WorkerHistorySuppliers</url-pattern>
 </servlet-mapping>  
+
+<servlet-mapping>
+  <servlet-name>WorkerSemesterHistory</servlet-name>
+  <url-pattern>/WorkerSemesterHistory</url-pattern>
+</servlet-mapping>
+
+
+<servlet-mapping>
+  <servlet-name>HistoryData</servlet-name>
+  <url-pattern>/HistoryData</url-pattern>
+</servlet-mapping>
+
 
   
 <servlet-mapping>
