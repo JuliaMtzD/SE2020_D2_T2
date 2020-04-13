@@ -28,10 +28,10 @@ toClient.println("<div class='w3-container w3-white w3-center w3-padding-32 w3-p
   toClient.println("  <div class='w3-content' style='max-width:600px '>");
  toClient.println("   <h1 class='w3-center'><b>WORKER MY ACCOUNT</b></h1>");
  
- 
+ int ID = Integer.parseInt(req.getParameter("id"));
 
  Vector<WorkerData> workerList;
- workerList = WorkerData.getWorkerList(connection);
+ workerList = WorkerData.getWorkerList2(connection, ID);
   
   
 for(int i=0; i< workerList.size(); i++){  
@@ -83,10 +83,10 @@ for(int i=0; i< workerList.size(); i++){
          toClient.println(" </div>");
      }   
         
-        
+
        toClient.println(" <input type='submit' value='Save Changes' class='w3-button w3-block w3-yellow w3-margin-bottom' >");
-        
-      toClient.println("</form>");
+    	toClient.println("  <button type='submit' formaction='WorkerDelete' class='w3-button w3-block w3-yellow w3-margin-bottom' >Delete Account</button>");
+      	toClient.println("</form>");
  
  
   toClient.println("  </div>");
